@@ -70,7 +70,7 @@ Function Save-Credential {
 	}
     
     If ([String]::IsNullOrEmpty($Comment)) {
-        $Comment = [String]::Format("Last edited by {0}\{1} on {2}" -F $Env:UserDomain,$Env:UserName,$Env:ComputerName)
+        $Comment = [String]::Format(("Last edited by {0}\{1} on {2}" -F $Env:UserDomain,$Env:UserName,$Env:ComputerName))
     }
     
     $Cred = New-Object PsUtils.CredMan+Credential
